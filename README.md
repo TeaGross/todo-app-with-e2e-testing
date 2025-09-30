@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# TodoApp
+Welcome to my todo app, my very first React project built with TypeScript!
+This simple application demonstrates my understanding of fundamental React concepts such as components, state, props, and event handling. The project is a classic todo list with interactive functionality and modular code structure.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ✨ Features
+- A hardcoded list of todo items, created using useState
 
-Currently, two official plugins are available:
+- Clear separation of concerns with multiple components for structure and presentation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Ability to mark todos as done via an onChange event that toggles isDone to true
 
-## React Compiler
+- Ability to delete a todo item using an onClick event and array filtering logic
+  
+- LocalStorage integration to persist todos between sessions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- A form component (AddTodo) that allows users to add new tasks
 
-## Expanding the ESLint configuration
+- Sorting functionality for the todo list:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    * Alphabetical order (A–Ö)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+    * Reverse alphabetical order (Ö–A)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Responsive styling using Tailwind CSS
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  ## 🛠 Tech Stack
+  
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+  ## Screenshots
+  **Mobile view**
+  
+  ![Mobile view](src/assets/screenshot-mobile.png)
+
+  **Tablet view**
+  
+  ![Tablet view](src/assets/screenshot-tablet.png)
+
+  **Desktop view**
+  
+  ![Desktop view](src/assets/screenshot-desktop.png)
+
+  ## Validation
+  ![Lighthouse analysis](src/assets/lighthouse-analysis.png)
+
+  ## 🤝 Credits
+  This project was developed as part of the curriculum at Medieinstitutet during my first year of studies.
