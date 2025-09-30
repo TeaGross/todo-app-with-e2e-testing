@@ -3,7 +3,7 @@ import type { Todo } from "../models/Todo"
 type TodoProps = {
     todo: Todo;
     onToggleDone: (id: string) => void;
-    onDelete: (id: string) => void;
+    onDelete: (id: string, isDone: boolean) => void;
 }
 
 export const TodoPresentation = ({todo, onToggleDone, onDelete}: TodoProps) => {
@@ -15,7 +15,7 @@ export const TodoPresentation = ({todo, onToggleDone, onDelete}: TodoProps) => {
                     <input className="w-[25px] h-[25px] accent-[#411010] cursor-pointer mr-6"
                         type="checkbox" title="Klicka här när uppgiften är färdig" checked={todo.isDone} onChange={() => onToggleDone(todo.id)} />
                     <span className="w-[60%] md:text-[1.5rem]">{todo.title}</span>
-                    <button className="bg-[#231942] border-none rounded w-[60px] h-[40px] mr-2 md:w-[80px]" onClick={() => onDelete(todo.id)}>🗑️</button>
+                    <button className="bg-[#231942] border-none rounded w-[60px] h-[40px] mr-2 md:w-[80px]" onClick={() => onDelete(todo.id, todo.isDone)}>🗑️</button>
                 </li>
     </>
 }

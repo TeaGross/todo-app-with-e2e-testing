@@ -7,12 +7,8 @@ import { AddTodo } from "./AddTodo"
 export const TodoList = () => {
     const [todos, setTodos] = useState<Todo[]>(
         JSON.parse(localStorage.getItem("todos") || JSON.stringify([
-            new Todo("Göra inlämningsuppgiften", false),
-            new Todo("Handla mat", false),
-            new Todo("Gör ett spread i junk journal", false),
-            new Todo("Vattna blommorna", false),
-            new Todo("Ta en promenad", false),
-            new Todo("Se Håkan Hellström på Ullevi", false)  
+            new Todo("Njut av livet", true),
+            new Todo("Mejla handledare", false),
         ])))
 
         const [sortOrder, setSortOrder] = useState<"asc" | "desc" | null>();
@@ -32,8 +28,12 @@ export const TodoList = () => {
         )
     }
 
-    const deleteTodo = (id : string) => {
-        setTodos(todos.filter((t) => t.id !== id ))
+    const deleteTodo = (id : string, isDone: boolean) => {
+
+        if(isDone === true) {
+            setTodos(todos.filter((t) => t.id !== id ))
+        }
+        
     }
 
     const addTodo = (t: Todo) => {
