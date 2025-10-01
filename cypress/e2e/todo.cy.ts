@@ -17,6 +17,11 @@ describe('template spec', () => {
   })
 
   // lägg till: disable button when isDone is false
+  it('button is disabled when not done', () => {
+    cy.get('ul > li').last().as('secondTodo')
+    cy.get('@secondTodo').find('input[type="checkbox"]').should('not.be.checked')
+    cy.get('@secondTodo').find('button').should('be.disabled')
+  })
 
   it('User can add new todo', () => {
     cy.get('ul > li').should('have.length', 2)
