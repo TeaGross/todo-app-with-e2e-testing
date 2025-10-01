@@ -86,7 +86,7 @@ It demonstrates my understanding of fundamental React concepts such as component
   ![Lighthouse analysis](src/assets/lighthouse-analysis.png)
 
   ### Cypress
-  ![Cypress validation](src/assets/lcypress.validation.png)
+  ![Cypress validation](src/assets/lcypress-validation.png)
 
   ## 🤝 Credits
   This project was developed as part of the curriculum at Medieinstitutet during my first year of studies.
