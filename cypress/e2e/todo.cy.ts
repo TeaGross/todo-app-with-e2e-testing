@@ -16,7 +16,6 @@ describe('template spec', () => {
     cy.get('ul > li').last().find('input[type="checkbox"]').should('not.be.checked')
   })
 
-  // lägg till: disable button when isDone is false
   it('button is disabled when not done', () => {
     cy.get('ul > li').last().as('secondTodo')
     cy.get('@secondTodo').find('input[type="checkbox"]').should('not.be.checked')
