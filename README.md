@@ -89,4 +89,4 @@ It demonstrates my understanding of fundamental React concepts such as component
   ![Cypress validation](src/assets/cypress-validation.png)
 
   ## 🤝 Credits
-  This project was developed as part of the curriculum at Medieinstitutet during my first year of studies.
+  This project was developed as part of the curriculum at Medieinstitutet during my second year of studies.
