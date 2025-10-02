@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/fed24d-testning-inl2-TeaGross/',
+  base: '/todo-app-with-e2e-testing/',
   plugins: [react(), tailwindcss()],
 })
